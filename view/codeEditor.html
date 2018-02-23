@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script src="../public/js/codemirror.js"></script>
+        <script src="../public/js/search.js"></script>
+        <script src="../public/js/searchcursor.js"></script>
+        <script src="../public/js/dialog.js"></script>        
+        <script src="../public/js/jump-to-line.js"></script>
+        <link rel="stylesheet" href="../public/css/codemirror.css">
+        <link rel="stylesheet" href="../public/css/dialog.css">
+        <link rel="stylesheet" href="../public/css/bulma.min.css">
+        <script src="../public/mode/javascript/javascript.js"></script> 
+        <title>GeekSkool Code Editor</title>
+    </head>
+
+    <style>
+        .cm-s-default{
+            background: rgb(247, 247, 247)
+        }
+        .CodeMirror{
+            height: 90%;
+        }    
+    </style>
+
+    <body>
+        <header>
+            <div class="tile is-child notification is-info">                          
+                <h1 class="title">GeekSkool Collaborative Code Editor</h1>
+            </div>
+        </header>
+        
+        <main style="height:90%">
+            <div class="tile is-ancestor">
+                <div class="tile is-2 is-vertical is-parent">
+                    <div class="tile is-child box" style="background-color:rgb(230, 241, 255)">
+                        <p class="subtitle">Connected Clients:</p>
+                        <ul>
+                            <li>peer1</li>
+                            <li>peer2</li>
+                        </ul>                        
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box" style="background-color:rgb(230, 241, 255)">
+                        <form>
+                            <textarea id="code" name="code"></textarea>                        
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>            
+            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                mode:  "javascript",
+                // readOnly: true, // non-editable
+                lineNumbers: true
+            })
+        </script>
+    </body>
+</html>
