@@ -1,2 +1,2 @@
 # code_alive
-Collaborative text editing
+Collaborative code editing
