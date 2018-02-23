@@ -1,6 +1,16 @@
 <html>
-    <header><title>This is title</title></header>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <title>This is title</title>
+    </head>
     <body>
         Hello world
+        <script>
+            const socket = io.connect()
+            socket.on('server', function (data) {
+              console.log(data)
+              socket.emit('client', {msg: 'hello from client'})
+            })
+        </script>
     </body>
 </html>
