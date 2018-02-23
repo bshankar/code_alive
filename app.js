@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 
 // FIXME
 app.get('/test', function (req, res) {
-  res.sendFile(path.join(__dirname + '/view/index.html'))
+  res.sendFile(path.join(__dirname, '/view/index.html'))
 })
 
 app.listen(port, function () {
