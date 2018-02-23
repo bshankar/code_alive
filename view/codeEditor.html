@@ -3,12 +3,12 @@
         <script src="../public/js/codemirror.js"></script>
         <script src="../public/js/search.js"></script>
         <script src="../public/js/searchcursor.js"></script>
-        <script src="../public/js/dialog.js"></script>        
+        <script src="../public/js/dialog.js"></script>
         <script src="../public/js/jump-to-line.js"></script>
         <link rel="stylesheet" href="../public/css/codemirror.css">
         <link rel="stylesheet" href="../public/css/dialog.css">
         <link rel="stylesheet" href="../public/css/bulma.min.css">
-        <script src="../public/mode/javascript/javascript.js"></script> 
+        <script src="../public/mode/javascript/javascript.js"></script>
         <title>GeekSkool Code Editor</title>
     </head>
 
@@ -18,16 +18,16 @@
         }
         .CodeMirror{
             height: 90%;
-        }    
+        }
     </style>
 
     <body>
-        <header>
-            <div class="tile is-child notification is-info">                          
+        <header class="content has-text-centered">
+            <div class="tile is-child notification is-info">
                 <h1 class="title">GeekSkool Collaborative Code Editor</h1>
             </div>
         </header>
-        
+
         <main style="height:90%">
             <div class="tile is-ancestor">
                 <div class="tile is-2 is-vertical is-parent">
@@ -36,20 +36,20 @@
                         <ul>
                             <li>peer1</li>
                             <li>peer2</li>
-                        </ul>                        
+                        </ul>
                     </div>
                 </div>
                 <div class="tile is-parent">
                     <div class="tile is-child box" style="background-color:rgb(230, 241, 255)">
                         <form>
-                            <textarea id="code" name="code"></textarea>                        
+                            <textarea id="code" name="code"></textarea>
                         </form>
                     </div>
                 </div>
             </div>
         </main>
 
-        <script>            
+        <script>
             var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
                 mode:  "javascript",
                 // readOnly: true, // non-editable
