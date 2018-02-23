@@ -1,16 +1,13 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="/socket.io/socket.io.js"></script>
+        <link rel="stylesheet" href="/css/bulma.min.css">
         <title>This is title</title>
     </head>
     <body>
-        Hello world
-        <script>
-            const socket = io.connect()
-            socket.on('server', function (data) {
-              console.log(data)
-              socket.emit('client', {msg: 'hello from client'})
-            })
-        </script>
+        <input class="input" type="text" id="username" placeholder="username" style="width: 30%"></input>
+        <a class="button is-link" id="connectButton">connect</a>
+        <script src="/js/client.js"></script>
     </body>
 </html>

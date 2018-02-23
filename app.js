@@ -1,9 +1,12 @@
 const path = require('path')
-const app = require('express')()
+const express = require('express')
+const app = express()
 const server = require('http').Server(app)
 
 const port = 9000
 const io = require('socket.io')(server)
+
+app.use(express.static('public'))
 
 app.get('/', function (req, res) {
   res.send('Hello World')
